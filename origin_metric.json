@@ -1,0 +1,125 @@
+[
+    {
+        "agentType": "prometheus",
+        "data_type": "double",
+        "help": "Idle client connections",
+        "key": "nginx_connections_waiting",
+        "metric_type": "gauge",
+        "name": "nginx_collector_plugin_nginx_connections_waiting",
+        "paramDefine": [],
+        "tagDefine": [],
+        "unit": ""
+    },
+    {
+        "agentType": "prometheus",
+        "data_type": "double",
+        "help": "Handled client connections",
+        "key": "nginx_connections_handled",
+        "metric_type": "counter",
+        "name": "nginx_collector_plugin_nginx_connections_handled",
+        "paramDefine": [],
+        "tagDefine": [],
+        "unit": ""
+    },
+    {
+        "agentType": "prometheus",
+        "data_type": "double",
+        "help": "Total http requests",
+        "key": "nginx_http_requests_total",
+        "metric_type": "counter",
+        "name": "nginx_collector_plugin_nginx_http_requests_total",
+        "paramDefine": [],
+        "tagDefine": [],
+        "unit": ""
+    },
+    {
+        "agentType": "prometheus",
+        "data_type": "double",
+        "help": "Exporter build information",
+        "key": "nginxexporter_build_info",
+        "metric_type": "gauge",
+        "name": "nginx_collector_plugin_nginxexporter_build_info",
+        "paramDefine": [
+            {
+                "default": "de15093",
+                "name": "gitCommit",
+                "readOnly": false,
+                "valueType": "string"
+            },
+            {
+                "default": "0.8.0",
+                "name": "version",
+                "readOnly": false,
+                "valueType": "string"
+            }
+        ],
+        "tagDefine": [
+            {
+                "default": "de15093",
+                "name": "gitCommit",
+                "readOnly": false
+            },
+            {
+                "default": "0.8.0",
+                "name": "version",
+                "readOnly": false
+            }
+        ],
+        "unit": ""
+    },
+    {
+        "agentType": "prometheus",
+        "data_type": "double",
+        "help": "Active client connections",
+        "key": "nginx_connections_active",
+        "metric_type": "gauge",
+        "name": "nginx_collector_plugin_nginx_connections_active",
+        "paramDefine": [],
+        "tagDefine": [],
+        "unit": ""
+    },
+    {
+        "agentType": "prometheus",
+        "data_type": "double",
+        "help": "Connections where NGINX is writing the response back to the client",
+        "key": "nginx_connections_writing",
+        "metric_type": "gauge",
+        "name": "nginx_collector_plugin_nginx_connections_writing",
+        "paramDefine": [],
+        "tagDefine": [],
+        "unit": ""
+    },
+    {
+        "agentType": "prometheus",
+        "data_type": "double",
+        "help": "Accepted client connections",
+        "key": "nginx_connections_accepted",
+        "metric_type": "counter",
+        "name": "nginx_collector_plugin_nginx_connections_accepted",
+        "paramDefine": [],
+        "tagDefine": [],
+        "unit": ""
+    },
+    {
+        "agentType": "prometheus",
+        "data_type": "double",
+        "help": "Connections where NGINX is reading the request header",
+        "key": "nginx_connections_reading",
+        "metric_type": "gauge",
+        "name": "nginx_collector_plugin_nginx_connections_reading",
+        "paramDefine": [],
+        "tagDefine": [],
+        "unit": ""
+    },
+    {
+        "agentType": "prometheus",
+        "data_type": "double",
+        "help": "Status of the last metric scrape",
+        "key": "nginx_up",
+        "metric_type": "gauge",
+        "name": "nginx_collector_plugin_nginx_up",
+        "paramDefine": [],
+        "tagDefine": [],
+        "unit": ""
+    }
+]
