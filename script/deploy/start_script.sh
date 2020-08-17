@@ -120,6 +120,13 @@ do
     esac
 done
 
+if [ -f exporter.pid ]; then
+    echo "The Nginx exporter has already started."
+    exit 0
+fi
+
 chmod +x ./src/nginx_exporter
 
-./src/nginx_exporter --nginx.scrape-uri http://$nginx_host:$nginx_port$nginx_status_uri --web.listen-address=$exporter_host:$exporter_port --web.telemetry-path=$exporter_uri
+./src/nginx_exporter --nginx.scrape-uri http://$nginx_host:$nginx_port$nginx_status_uri --web.listen-address=$exporter_host:$exporter_port --web.telemetry-path=$exporter_uri &
+
+echo $! > exporter.pid
