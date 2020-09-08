@@ -4,10 +4,10 @@ type: exporter
 name: nginx_collector_plugin
 version: 1.0.0
 
-category: Web 框架
+category: Web框架
 params:
     - nginx_host
-    - nginx_port
+    - nginx_status_port
     - nginx_status_uri
     - exporter_host
     - exporter_port
