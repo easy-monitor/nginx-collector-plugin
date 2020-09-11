@@ -1,9 +1,8 @@
 [
     {
         "_object_id": "_DASHBOARD",
-        "instanceId": "5acd8941bf20b",
-        "name": "Nginx 实例监控",
         "namespace": "resource-monitor._NGINX_INSTANCE",
+        "name": "Nginx 实例监控",
         "panels": [
             {
                 "brickConf": "{\"brick\":\"chart-v2.time-series-chart\",\"properties\":{\"height\":230,\"xField\":\"time\",\"yFields\":[\"nginx_connections_accepted\",\"nginx_connections_active\",\"nginx_connections_handled\",\"nginx_connections_reading\",\"nginx_connections_writing\",\"nginx_connections_waiting\"],\"axis\":{\"yAxis\":{\"min\":0}}},\"lifeCycle\":{\"useResolves\":[{\"provider\":\"providers-of-data-exchange.olap-api-query\",\"args\":[{\"model\":\"<% \\\"easyops.\\\" + PARAMS.get(\\\"objectId\\\") %>\",\"dims\":[\"time(1m)\"],\"measures\":[{\"name\":\"nginx_connections_accepted\",\"function\":{\"expression\":\"avg\",\"args\":[\"nginx_connections_accepted\"]}},{\"name\":\"nginx_connections_active\",\"function\":{\"expression\":\"avg\",\"args\":[\"nginx_connections_active\"]}},{\"name\":\"nginx_connections_handled\",\"function\":{\"expression\":\"avg\",\"args\":[\"nginx_connections_handled\"]}},{\"name\":\"nginx_connections_reading\",\"function\":{\"expression\":\"avg\",\"args\":[\"nginx_connections_reading\"]}},{\"name\":\"nginx_connections_writing\",\"function\":{\"expression\":\"avg\",\"args\":[\"nginx_connections_writing\"]}},{\"name\":\"nginx_connections_waiting\",\"function\":{\"expression\":\"avg\",\"args\":[\"nginx_connections_waiting\"]}}],\"filters\":[{\"name\":\"instanceId\",\"operator\":\"==\",\"value\":\"${query.instanceId}\"},{\"name\":\"time\",\"operator\":\">=\",\"value\":\"${query.from=\\\"now-1h\\\"|string}\"},{\"name\":\"time\",\"operator\":\"<=\",\"value\":\"<% parseInt(+moment() / 1000) %>\"}],\"order\":[{\"name\":\"time\",\"order\":\"desc\"}]}],\"transform\":{\"data\":\"@{list}\"},\"onReject\":{\"transform\":{\"error\":\"<% DATA.message || '接口请求错误' %>\"}}}]}}",
