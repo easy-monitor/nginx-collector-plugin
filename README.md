@@ -82,7 +82,7 @@ $ sh plugin_op.sh install 8888 /data/easyops/monitor_plugin_packages/nginx-colle
 
 ```sh
 $ cd /data/easyops/monitor_plugin_packages/nginx-collector-plugin/script
-$ sh deploy/start_script.sh --nginx-host 127.0.0.1 --nginx-status-port 8080 --nginx-status-uri /stub_status
+$ sh bin/start.sh --nginx-host 127.0.0.1 --nginx-status-port 8080 --nginx-status-uri /stub_status
 ```
 
 2. 通过访问 http://127.0.0.1:9113/metrics 来获取指标数据，请替换其中的 `127.0.0.1:9113` 为 Exporter 具体的监听地址和端口。
